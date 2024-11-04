@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://v22edbht07xb"]
+
+[ext_resource type="Texture2D" uid="uid://cgjgb0x7swoka" path="res://icon.svg" id="1_ep3mu"]
+[ext_resource type="Script" path="res://shop.gd" id="1_fs1hb"]
+[ext_resource type="PackedScene" uid="uid://dxlgkofhnlb82" path="res://node_2d.tscn" id="3_6eedx"]
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_fs1hb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_ep3mu")
+stretch_mode = 1
+
+[node name="Node2D" parent="." instance=ExtResource("3_6eedx")]
+offset_left = 416.0
+offset_top = 161.0
+offset_right = 722.0
+offset_bottom = 462.0
+
+[connection signal="pressed" from="Node2D" to="." method="_on_node_2d_pressed"]
+[connection signal="animation_finished" from="Node2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+
+[editable path="Node2D"]

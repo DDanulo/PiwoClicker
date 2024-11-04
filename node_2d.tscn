@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dxlgkofhnlb82"]
+
+[ext_resource type="Texture2D" uid="uid://ppx58u4rtjo" path="res://Sprite-0001.png" id="1_f0dvn"]
+[ext_resource type="Texture2D" uid="uid://dbxegqigkulap" path="res://Sprite-0002.png" id="2_1wyht"]
+[ext_resource type="Texture2D" uid="uid://xd0dxgf6w6qh" path="res://Sprite-0003.png" id="3_ucidb"]
+[ext_resource type="Texture2D" uid="uid://8nhxd4jp0jfm" path="res://Sprite-0001.jpeg" id="4_ed4cy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qrqim"]
+animations = [{
+"frames": [{
+"duration": 1.3,
+"texture": ExtResource("1_f0dvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1wyht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ucidb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ed4cy")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Button"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(9.5, 9.5)
+sprite_frames = SubResource("SpriteFrames_qrqim")
+frame = 1
+frame_progress = 1.0
+speed_scale = 2.0
+centered = false
