@@ -11,6 +11,7 @@ func save_number():
 	var config := ConfigFile.new()  # Создаем новый объект ConfigFile
 	config.set_value("Settings", "saved_number", n)  # Устанавливаем значение для ключа в секции "Settings"
 	config.save("C:/Users/hamon/Desktop/Saves/save_file.cfg")  # Сохраняем файл на рабочем столе
+	#test test
 
 # Функция для загрузки значения n из файла
 func load_number():
