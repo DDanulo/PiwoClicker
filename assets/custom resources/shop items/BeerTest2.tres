@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=3 format=3 uid="uid://bvv1lwj1htfph"]
+
+[ext_resource type="Script" path="res://scripts/resource scripts/ShopItemRecource.gd" id="1_7i82y"]
+[ext_resource type="Texture2D" uid="uid://3xo08ceg8fwp" path="res://assets/sprites/beer1.png" id="1_snqwv"]
+
+[resource]
+script = ExtResource("1_7i82y")
+name = "asdasfas"
+cost = 231
+icon = ExtResource("1_snqwv")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dld7q5g54ptkj"]
+
+[ext_resource type="Script" path="res://scripts/node scripts/shop_container.gd" id="1_hwjra"]
+[ext_resource type="Resource" uid="uid://dvbkytm6dj2rx" path="res://assets/custom resources/shop items/BeerTest1.tres" id="2_uio0y"]
+
+[node name="ShopContainer" type="Node2D"]
+script = ExtResource("1_hwjra")
+shopItemList = [ExtResource("2_uio0y")]

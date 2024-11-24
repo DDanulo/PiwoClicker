@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://v22edbht07xb"]
+
+[ext_resource type="Script" path="res://scripts/scene scripts/shop.gd" id="1_mc4wu"]
+[ext_resource type="Texture2D" uid="uid://cgjgb0x7swoka" path="res://assets/sprites/icon/icon.svg" id="2_dtquc"]
+[ext_resource type="PackedScene" uid="uid://dxlgkofhnlb82" path="res://scenes/node_2d.tscn" id="3_ehe73"]
+[ext_resource type="PackedScene" uid="uid://dld7q5g54ptkj" path="res://scenes/shop_container.tscn" id="4_e6u3e"]
+[ext_resource type="Script" path="res://scripts/resource scripts/ShopItemRecource.gd" id="5_q6rv6"]
+[ext_resource type="Resource" uid="uid://dvbkytm6dj2rx" path="res://assets/custom resources/shop items/BeerTest1.tres" id="5_tux6k"]
+[ext_resource type="Resource" uid="uid://bvv1lwj1htfph" path="res://assets/custom resources/shop items/BeerTest2.tres" id="6_n5vmi"]
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_mc4wu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_dtquc")
+stretch_mode = 1
+
+[node name="Node2D" parent="." instance=ExtResource("3_ehe73")]
+offset_left = 706.0
+offset_top = 155.0
+offset_right = 1012.0
+offset_bottom = 456.0
+
+[node name="AnimatedSprite2D" parent="Node2D" index="0"]
+position = Vector2(6, 1)
+
+[node name="ShopContainer" parent="." instance=ExtResource("4_e6u3e")]
+shopItemList = Array[ExtResource("5_q6rv6")]([ExtResource("5_tux6k"), ExtResource("6_n5vmi")])
+
+[connection signal="pressed" from="Node2D" to="." method="_on_node_2d_pressed"]
+[connection signal="animation_finished" from="Node2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+
+[editable path="Node2D"]

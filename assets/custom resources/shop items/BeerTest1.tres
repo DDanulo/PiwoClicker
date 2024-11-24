@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=3 format=3 uid="uid://dvbkytm6dj2rx"]
+
+[ext_resource type="Texture2D" uid="uid://chy42f5j86fuw" path="res://assets/sprites/beer animated/Спрайт-0020.png" id="1_k78o8"]
+[ext_resource type="Script" path="res://scripts/resource scripts/ShopItemRecource.gd" id="2_op2fl"]
+
+[resource]
+script = ExtResource("2_op2fl")
+name = "Beer1"
+initialCost = 10
+cost = 0
+icon = ExtResource("1_k78o8")
+bpm = 1
+level = 0
